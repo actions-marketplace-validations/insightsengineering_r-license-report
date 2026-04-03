@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout repo 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: License report for Aragog 🕷
         uses: ./
@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Checkout repo 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: License report for Buckbeak (With HTML = ${{ matrix.as_html }}) 🦄
         uses: ./
@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload report ⤴
         if: ${{ matrix.as_html }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: license-report.html
           path: license-report.html
